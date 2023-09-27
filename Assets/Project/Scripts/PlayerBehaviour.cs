@@ -6,6 +6,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
 
     private Rigidbody myRigidbody;
+    public Transform cameraTransform;
     
     void Start()
     {
@@ -14,7 +15,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 movimentPlayer = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        myRigidbody.AddForce(movimentPlayer);
+        //Quando o W é pressionado, o eixo Vertical vai retornar 1.
+        Vector3 movimentPlayer = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); // só o W pressionado = Vector3(0, 0, 1)
+        Debug.Log("movimentPlayer: " + movimentPlayer);
+        myRigidbody.AddForce(movimentPlayer * 10);
     }
 }
