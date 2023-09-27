@@ -800,6 +800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYER
       objectReference: {fileID: 0}
+    - target: {fileID: 2635741247537385277, guid: 39a7bfef4cb5c404a9798df966453e2b, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5492354361125938730, guid: 39a7bfef4cb5c404a9798df966453e2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -896,6 +900,14 @@ PrefabInstance:
     - target: {fileID: 2249367152289785963, guid: 3d4fb301dd71d514a9156fdd0b4864b5, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249367152289785963, guid: 3d4fb301dd71d514a9156fdd0b4864b5, type: 3}
+      propertyPath: m_TagString
+      value: items
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774353914361159643, guid: 3d4fb301dd71d514a9156fdd0b4864b5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

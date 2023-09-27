@@ -20,4 +20,12 @@ public class PlayerBehaviour : MonoBehaviour
         Debug.Log("movimentPlayer: " + movimentPlayer);
         myRigidbody.AddForce(movimentPlayer * 10);
     }
+
+    private void OnTriggerEnter(Collider other) {
+
+        if(other.gameObject.CompareTag("items")) {
+
+            Destroy(other.gameObject);
+        }
+    }
 }
