@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4542479312607644078}
   m_Layer: 0
   m_Name: PLAYER
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671a718f3c0954e4197a89ba5a93beff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
 --- !u!33 &5396953557438586922
 MeshFilter:
   m_ObjectHideFlags: 0

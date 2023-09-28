@@ -21,6 +21,7 @@ public class PlayerBehaviour : MonoBehaviour
         myRigidbody.AddForce(movimentPlayer * 10);
     }
 
+
     private void OnTriggerEnter(Collider other) {
 
         if(other.gameObject.CompareTag("items")) {
