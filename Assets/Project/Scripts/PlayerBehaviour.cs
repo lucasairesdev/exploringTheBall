@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -9,10 +10,19 @@ public class PlayerBehaviour : MonoBehaviour
     public Transform cameraTransform;
 
     public GameObject particulaItem;
+
+    public Text scoreText;
+    public Text endGameText;
+
+    private int scoreGame;
        
     void Start()
     {
-        myRigidbody = GetComponent<Rigidbody>();  
+        myRigidbody = GetComponent<Rigidbody>();
+        endGameText.text = "";
+        //endGameText.IsActive = false;
+
+        UpdateScoreUI();
     }
 
     void FixedUpdate()
@@ -29,6 +39,20 @@ public class PlayerBehaviour : MonoBehaviour
         if(other.gameObject.CompareTag("items")) {
             Instantiate(particulaItem, other.gameObject.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+            UpdateScoreUI();
+
+
+
+        }
+    }
+
+    void UpdateScoreUI() {
+        
+        scoreText.text = "Score: " + scoreGame.ToString();
+        scoreGame++;
+
+        if(scoreGame == 10) {
+            endGameText.text = "You Win!";
         }
     }
 }
