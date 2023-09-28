@@ -7,7 +7,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     private Rigidbody myRigidbody;
     public Transform cameraTransform;
-    
+
+    public GameObject particulaItem;
+       
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();  
@@ -25,7 +27,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
 
         if(other.gameObject.CompareTag("items")) {
-
+            Instantiate(particulaItem, other.gameObject.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
     }
